@@ -48,3 +48,16 @@ sample-api/　　ルートディレクトリ
 ```
 make serve
 ```
+
+## 動作確認
+
+```
+// TODO取得
+curl -i localhost:8080/todos/
+// TODO追加
+curl -i -X POST -H "Content-Type: application/json" -d '{"title":"test", "content":"テストです。"}' localhost:8080/todos/
+// TODO更新
+curl -i -X PUT -H "Content-Type: application/json" -d '{"title":"test", "content":"変更テスト"}' localhost:8080/todos/4
+// TODO削除
+curl -i -X DELETE localhost:8080/todos/4
+```
